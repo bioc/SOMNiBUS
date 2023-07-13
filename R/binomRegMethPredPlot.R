@@ -50,7 +50,7 @@
 #' @author  Audrey Lemaçon
 #' @importFrom data.table as.data.table
 #' @importFrom tidyr pivot_longer %>%
-#' @importFrom ggplot2 ggplot geom_line theme_bw aes_string theme
+#' @importFrom ggplot2 ggplot geom_line theme_bw aes theme
 #' @importFrom ggplot2 geom_point geom_rug xlab ggsave ylab guides
 #' @importFrom ggplot2 guide_legend scale_linetype_manual scale_color_manual
 #' @examples
@@ -102,8 +102,8 @@ binomRegMethPredPlot <- function(pred, pred.type = "proportion",
   
   # if group.col == NULL, create a scatter plot with geom_point
   if(is.null(group.col)){
-    g <- ggplot(data = pred, mapping = aes_string(x = "Position")) + 
-      geom_point(mapping = aes_string(y = pred.col)) + 
+    g <- ggplot(data = pred, mapping = aes(x = "Position")) + 
+      geom_point(mapping = aes(y = pred.col)) + 
       geom_rug(sides = "b", color = "black") + 
       theme_bw() + xlab("Genomic position") + 
       ylab(paste("Predicted methylation levels", 
@@ -121,8 +121,8 @@ binomRegMethPredPlot <- function(pred, pred.type = "proportion",
     pred <- pred[!(is.na(pred[[group.col]]) | pred[[group.col]] == ""),]
     
     # start creating the plot
-    g <- ggplot(data = pred, mapping = aes_string(x = "Position")) + 
-      geom_line(mapping = aes_string(y = pred.col, 
+    g <- ggplot(data = pred, mapping = aes(x = "Position")) + 
+      geom_line(mapping = aes(y = pred.col, 
                                      group = group.col, 
                                      color = group.col,
                                      linetype = group.col

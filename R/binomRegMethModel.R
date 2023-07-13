@@ -1071,6 +1071,7 @@ extractDesignMatrix <- function(GamObj, verbose = TRUE) {
 #' p-value and its rank for the given smooth term.
 #' @importFrom mgcv predict.gam
 #' @importFrom mgcv model.matrix.gam
+#' @importFrom stats pf
 #' @noRd
 testStat <- function(p,X,V,rank=NULL,type=0,res.df= -1) {
   ## Implements Wood (2013) Biometrika 100(1), 221-228

@@ -10,7 +10,7 @@ BS1 <- bsseq::BSseq(pos = 1:3, chr = c("chr1", "chr2", "chr1"), M = M, Cov = Cov
 dat1 <- formatFromBSseq(bsseq_dat = BS1, verbose = FALSE)
 
 
-M <- matrix(1:12, 3,2)
+M <- matrix(1:6, 3,2)
 Cov <- M + 2
 colnames(M) <- c("A1", "A2")
 BS2 <- bsseq::BSseq(pos = 1:3, chr = rep("chr1",3), M = M, Cov = Cov)

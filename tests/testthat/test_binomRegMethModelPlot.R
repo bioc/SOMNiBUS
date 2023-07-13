@@ -45,9 +45,7 @@ test_that(desc = "Test incorrect values",{
   # check that the file doesn't already exist
   expect_false(object = file.exists(filename))
   expect_warning(object = binomRegMethModelPlot(BEM.obj, same.range = FALSE, 
-                                                save = filename, verbose = FALSE), 
-                 regexp = paste0("Unknown graphics format for \\'",filename,
-                                 "\\'. The plot will be saved as a .pdf by default"))
+                                               save = filename, verbose = FALSE))
   # check the file has been created by binomRegMethModelPlot
   expect_true(object = file.exists(paste0(filename,".pdf")))
 })

@@ -22,7 +22,7 @@
 #' @author  Kaiqiong Zhao, Audrey Lemaçon
 #' @importFrom data.table as.data.table
 #' @importFrom tidyr pivot_longer %>%
-#' @importFrom ggplot2 ggplot geom_line theme_bw aes_string theme
+#' @importFrom ggplot2 ggplot geom_line theme_bw aes theme
 #' @importFrom ggplot2 geom_hline geom_rug xlab ggtitle facet_wrap ggsave
 #' @examples
 #' #------------------------------------------------------------#
@@ -121,12 +121,12 @@ binomRegMethModelPlot <- function(BEM.obj, mfrow = NULL, same.range = FALSE,
   # use aes_string instead of aes to avoid being flagged by R CMD check 
   # "no visible binding for global variable ‘Lower’"
   g <- ggplot(data = estimates, 
-              mapping = aes_string(x = "Position", 
+              mapping = aes(x = "Position", 
                                    y = "Estimate", 
                                    group = "Covariate", 
                                    color = "Covariate")) + geom_line() + 
-    geom_line(aes_string(y = "Lower"), linetype = "dashed") +
-    geom_line(aes_string(y = "Upper"), linetype = "dashed") + theme_bw() + 
+    geom_line(aes(y = "Lower"), linetype = "dashed") +
+    geom_line(aes(y = "Upper"), linetype = "dashed") + theme_bw() + 
     geom_hline(yintercept = 0, linetype = "dashed") + 
     geom_rug(sides = "b", color = "black") + xlab("Genomic position") + 
     ggtitle(title) + theme(legend.position = "none")

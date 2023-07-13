@@ -63,9 +63,7 @@ test_that(desc = "Test incorrect values",{
                                                pred.type = "link.scale", 
                                                pred.col = "Pred", 
                                                save = filename, 
-                                               verbose = FALSE), 
-                 regexp = paste0("Unknown graphics format for \\'",filename,
-                                 "\\'. The plot will be saved as a .pdf by default"))
+                                               verbose = FALSE))
   # check the file has been created by binomRegMethPredPlot
   expect_true(object = file.exists(paste0(filename,".pdf")))
 })

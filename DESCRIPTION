@@ -13,7 +13,6 @@ Authors@R: c(person("Kaiqiong", "Zhao", role = "aut",
              person("Celia", "Greenwood" , role = c("ths", "aut"), 
                     email = "celia.greenwood@mcgill.ca")
                     )
-Maintainer: Audrey Lemaçon <audrey@mims.ai>
 Description: This package aims to analyse count-based methylation data on predefined genomic regions, such as those obtained by targeted sequencing, and thus to identify differentially methylated regions (DMRs) that are associated with phenotypes or traits. The method is built a rich flexible model that allows for the effects, on the methylation levels, of multiple covariates to vary smoothly along genomic regions. At the same time, this method also allows for sequencing errors and can adjust for variability in cell type mixture. 
 License: MIT + file LICENSE
 URL: https://github.com/kaiqiong/SOMNiBUS

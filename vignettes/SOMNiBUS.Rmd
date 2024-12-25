@@ -107,7 +107,7 @@ formatFromBismark <- function(..., verbose = TRUE)
 
 ```
 
-`...` refers to the parameters from `bsseq::read.bismark()` functions.  Use `?bsseq::read.bismark()` for more information.
+`...` refers to the parameters from `bsseq::read.bismark()` function.  Use `?bsseq::read.bismark()` for more information.
 
 ## Filtering CpGs and samples
 

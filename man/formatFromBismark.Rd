@@ -39,7 +39,6 @@ dat <- formatFromBismark(infile, verbose = FALSE)
 alignment suite.
 
 Other Parsing functions: 
-\code{\link{formatFromBSmooth}()},
 \code{\link{formatFromBSseq}()}
 }
 \author{

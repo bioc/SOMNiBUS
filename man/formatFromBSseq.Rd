@@ -39,7 +39,6 @@ dat <- formatFromBSseq(BStest, verbose = FALSE)
 \link[bsseq]{BSseq} for the BSseq class.
 
 Other Parsing functions: 
-\code{\link{formatFromBSmooth}()},
 \code{\link{formatFromBismark}()}
 }
 \author{

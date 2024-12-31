@@ -3,7 +3,7 @@
 \docType{data}
 \name{RAdat}
 \alias{RAdat}
-\title{Methylation data from a rheumatoid arthritis study}
+\title{A simulated methylation dataset based on a real data.}
 \format{
 A data frame of 5289 rows and 6 columns. Each row represents a CpG
 site for a sample. Columns include in order:
@@ -17,7 +17,8 @@ site for a sample. Columns include in order:
 }
 }
 \source{
-Dr. Marie Hudson (McGill University)
+simulation is based a real data set provided by
+Dr. Marie Hudson (McGill University).
 }
 \usage{
 RAdat
@@ -31,5 +32,9 @@ This example data include methylation levels of cell type separated blood
 samples of 22 rheumatoid arthritis (RA) patients and 21 healthy individuals.
 In the data set, 123 CpG sites are measured and there are 25 samples from
 circulating T cells and 18 samples from monocytes.
+
+It should be noted that this data example is only for illustration purposes.
+The forward and reverse reads were not merged in this dataset.
+Try not to overinterpret the results of this simple example.
 }
 \keyword{datasets}
